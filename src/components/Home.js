@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Pokeball from '../pokeball.png';
+import { connect } from 'react-redux';
 
 class Home extends Component {
-  state = {
-    posts: []
-  };
-
-  componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
-      console.log(res);
-      this.setState({
-        posts: res.data.slice(0, 30)
-      });
-    });
-  }
-
   render() {
     const { posts } = this.state;
     const postList = posts.length ? (
@@ -45,4 +32,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default connect()(Home);
