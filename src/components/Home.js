@@ -23,10 +23,10 @@ class Home extends Component {
       posts.map(post => {
         return (
           <div className="post card" key={post.id}>
-            <img src={Pokeball} />
+            <img src={Pokeball} alt="A Pokeball" />
             <Link to={'/' + post.id}>
               <div className="card-content">
-                <span className="card-title">{post.title}</span>
+                <span className="card-title red-text ">{post.title}</span>
                 <p>{post.body}</p>
               </div>
             </Link>
@@ -37,7 +37,7 @@ class Home extends Component {
       <div className="center">No posts yellowBright.</div>
     );
     return (
-      <div className="container">
+      <div className="container home">
         <h4 className="center">Home</h4>
         <div>{postList}</div>
       </div>
