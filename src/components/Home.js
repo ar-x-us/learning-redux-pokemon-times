@@ -21,7 +21,7 @@ class Home extends Component {
         );
       })
     ) : (
-      <div className="center">No posts yellowBright.</div>
+      <div className="center">No posts.</div>
     );
     return (
       <div className="container home">
